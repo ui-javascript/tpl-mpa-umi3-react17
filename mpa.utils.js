@@ -19,12 +19,15 @@ function isProd() {
 
 function shouldReadAsEntry(moduleName) {
   // 是否小写字母开头 并且不以use开头
-  return moduleName.charAt(0).match(/^.*[a-z]+.*$/) && moduleName.indexOf('use') !== 0;
+  return (
+    moduleName.charAt(0).match(/^.*[a-z]+.*$/) &&
+    moduleName.indexOf('use') !== 0
+  );
 }
-
 
 exports.getEntry = function getEntry(globPath) {
   const entries = [];
+  let hasIndex = false;
 
   glob.sync(globPath).forEach((entry) => {
     // 切割路径 --> [ '.', '_project', 'module', 'foo.js' ]
@@ -53,8 +56,10 @@ exports.getEntry = function getEntry(globPath) {
     let prefix = '';
     // 除了moduleName与当前文件名前缀是否一致, 且层级为1
     // 其他情况将section串联，作为uuid的一部分
-    if (sections.length > 1 ||
-      (sections.length === 1 && moduleName.indexOf(sections[0]) !== 0)) {
+    if (
+      sections.length > 1 ||
+      (sections.length === 1 && moduleName.indexOf(sections[0]) !== 0)
+    ) {
       prefix = `${sections.join('-')}-`;
     }
 
@@ -64,10 +69,14 @@ exports.getEntry = function getEntry(globPath) {
 
     // entries[uuid] = entry;
 
+    if (uuid === 'index') {
+      hasIndex = true;
+    }
+
     entries.push({
-     path: `/${uuid}`,
-     component: "../." + entry
-    })
+      path: `/${uuid}`,
+      component: '../.' + entry,
+    });
   });
 
   // console.log('-------页面--------');
@@ -75,5 +84,6 @@ exports.getEntry = function getEntry(globPath) {
 
   return {
     entry: entries,
+    hasIndex,
   };
-}
+};
