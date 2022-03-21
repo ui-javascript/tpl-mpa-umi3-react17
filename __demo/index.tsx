@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM  from 'react-dom';
-import styles from './page1.less';
+import styles from './index.less';
 
 const App = () => {
   return (

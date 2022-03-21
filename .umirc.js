@@ -4,8 +4,15 @@ const { getEntry } = require('./mpa.utils')
 const { CONFIG } = require('./mpa.config')
 
 const mpaEntries = getEntry(CONFIG.entry);
-console.log(mpaEntries.entry)
 
+const routes = [
+  {
+    path: '/', 
+    component: mpaEntries.entry[0].component
+  },
+  ...mpaEntries.entry
+]
+console.log(routes)
 
 export default defineConfig({
   nodeModulesTransform: {
@@ -21,12 +28,12 @@ export default defineConfig({
   //     component: '../../__demo/page2.jsx' 
   //   },
   // ],
-  routes: mpaEntries.entry,
-  publicPath: './',
+  routes,
+  // publicPath: './',
   outputPath: 'docs',
   mpa: {},
   mfsu: { production: { output: '.mfsu-production' } },
-  fastRefresh: {},
+  // fastRefresh: {},
   // exportStatic: {},
   chainWebpack(config, { env, webpack, createCSSRule }) {
     // 设置 alias

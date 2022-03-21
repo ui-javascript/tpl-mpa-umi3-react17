@@ -66,7 +66,7 @@ exports.getEntry = function getEntry(globPath) {
 
     entries.push({
      path: `/${uuid}`,
-     components: "../." + entry
+     component: "../." + entry
     })
   });
 
