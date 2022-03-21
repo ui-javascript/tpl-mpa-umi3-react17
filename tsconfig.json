@@ -22,7 +22,7 @@
     "config/**/*",
     ".umirc.js",
     "typings.d.ts"
-, "__demo/index/index.tsx"  ],
+, "src/pages/index/index.tsx", "__demo/page2", "__demo/page2.jsx"  ],
   "exclude": [
     "node_modules",
     "lib",
