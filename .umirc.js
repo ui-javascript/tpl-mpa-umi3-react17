@@ -29,7 +29,7 @@ export default defineConfig({
   //   },
   // ],
   routes,
-  // publicPath: './',
+  publicPath: './',
   outputPath: 'docs',
   mpa: {},
   mfsu: { production: { output: '.mfsu-production' } },
