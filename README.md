@@ -1,18 +1,9 @@
 # umi project
 
-写的时候还是多路径路由
-最后打包出来MPA
+写的时候还是多路径路由 
 
-## Getting Started
+最后打包出来MPA @todo
 
-Install dependencies,
+# 常见问题 @bug
 
-```bash
-$ yarn
-```
-
-Start the dev server,
-
-```bash
-$ yarn start
-```
+- 打包路径有问题

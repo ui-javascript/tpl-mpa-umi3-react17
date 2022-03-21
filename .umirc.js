@@ -29,12 +29,17 @@ export default defineConfig({
   //   },
   // ],
   routes,
+  // publicPath: '/tpl-mpa-umi3-react17/',
   publicPath: './',
   outputPath: 'docs',
-  mpa: {},
-  mfsu: { production: { output: '.mfsu-production' } },
+  mfsu: { 
+    // production: { output: '.mfsu-production' } 
+  },
   // fastRefresh: {},
+  
+  // mpa: {},
   // exportStatic: {},
+
   chainWebpack(config, { env, webpack, createCSSRule }) {
     // 设置 alias
     // config.resolve.alias.set('@', 'src');
