@@ -8,9 +8,10 @@
 chain-webpack
 ```
 
-- 打包路径publicPath有问题
+- 打包路径publicPath的问题
 
 ```
+publicPath: '/tpl-mpa-umi3-react17/',
 mpa: {},
 exportStatic: {},
 ```
