@@ -29,8 +29,8 @@ export default defineConfig({
   //   },
   // ],
   routes,
-  // publicPath: '/tpl-mpa-umi3-react17/',
-  publicPath: './',
+  publicPath: '/tpl-mpa-umi3-react17/',
+  // publicPath: './',
   outputPath: 'docs',
   mfsu: { 
     // production: { output: '.mfsu-production' } 
