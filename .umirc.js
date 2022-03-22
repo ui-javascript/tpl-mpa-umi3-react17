@@ -32,11 +32,11 @@ export default defineConfig({
   // ],
   routes,
   // publicPath: '/demo-ahooks-reactuse-202203/',
-  // publicPath: './',
-  publicPath:
-    process.env.NODE_ENV === 'production'
-      ? 'https://ui-javascript.github.io/tpl-mpa-umi3-react17/'
-      : '/',
+  publicPath: './',
+  // publicPath:
+  //   process.env.NODE_ENV === 'production'
+  //     ? 'https://ui-javascript.github.io/tpl-mpa-umi3-react17/'
+  //     : '/',
   outputPath: 'docs',
   // history: { type: 'hash' },
   mfsu: {
