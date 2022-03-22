@@ -31,7 +31,6 @@ export default defineConfig({
   //   },
   // ],
   routes,
-  // publicPath: '/demo-ahooks-reactuse-202203/',
   publicPath: './',
   // publicPath:
   //   process.env.NODE_ENV === 'production'

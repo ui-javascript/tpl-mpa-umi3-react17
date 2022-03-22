@@ -24,9 +24,10 @@ ReactDOM.render(<App />, document.getElementById('root'))
     - https://blog.csdn.net/qq_34273888/article/details/110621995
 
 ```
-publicPath: process.env.NODE_ENV === 'production' ? 
-    'https://ui-javascript.github.io/tpl-mpa-umi3-react17/' 
-    : '/',
+publicPath: './',
+// publicPath: process.env.NODE_ENV === 'production' ? 
+//    'https://ui-javascript.github.io/tpl-mpa-umi3-react17/' 
+//    : '/',
 mpa: {},
 // exportStatic: {},
 ```
