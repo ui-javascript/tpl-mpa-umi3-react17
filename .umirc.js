@@ -38,14 +38,14 @@ export default defineConfig({
       ? 'https://ui-javascript.github.io/tpl-mpa-umi3-react17/'
       : '/',
   outputPath: 'docs',
-  history: { type: 'hash' },
+  // history: { type: 'hash' },
   mfsu: {
     //   // production: { output: '.mfsu-production' }
   },
   // fastRefresh: {},
 
   // @todo 多页面配置总有问题
-  // mpa: {},
+  mpa: {},
   // exportStatic: {},
 
   // chainWebpack(config, { env, webpack, createCSSRule }) {
