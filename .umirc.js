@@ -40,7 +40,8 @@ export default defineConfig({
   },
   // fastRefresh: {},
 
-  mpa: {},
+  // @todo 多页面配置总有问题
+  // mpa: {},
   // exportStatic: {},
 
   // chainWebpack(config, { env, webpack, createCSSRule }) {
