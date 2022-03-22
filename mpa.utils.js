@@ -69,7 +69,7 @@ exports.getEntry = function getEntry(globPath) {
 
     // entries[uuid] = entry;
 
-    if (uuid === 'index') {
+    if (uuid == 'index') {
       hasIndex = true;
     }
 

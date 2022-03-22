@@ -17,7 +17,9 @@ ReactDOM.render(<App />, document.getElementById('root'))
 - 打包路径publicPath的问题
 
 ```
-publicPath: '/tpl-mpa-umi3-react17/',
-mpa: {},
-exportStatic: {},
+publicPath: process.env.NODE_ENV === 'production' ? 
+    'https://ui-javascript.github.io/tpl-mpa-umi3-react17/demo-ahooks-reactuse-202203/' 
+    : '/',
+// mpa: {},
+// exportStatic: {},
 ```
