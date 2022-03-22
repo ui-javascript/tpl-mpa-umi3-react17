@@ -43,8 +43,8 @@ export default defineConfig({
   },
   // fastRefresh: {},
 
-  // mpa: {},
-  exportStatic: {},
+  mpa: {},
+  // exportStatic: {},
 
   // chainWebpack(config, { env, webpack, createCSSRule }) {
   //   // 设置 alias
