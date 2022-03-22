@@ -1,6 +1,6 @@
 # README
 
-打包有问题, 暂时就开发用用
+暂时是多路由页面 @todo
 
 # 常见问题 @bug
 
@@ -8,6 +8,10 @@
 
 ```
 chain-webpack
+
+===
+暂时不要在底部写
+ReactDOM.render(<App />, document.getElementById('root'))
 ```
 
 - 打包路径publicPath的问题
