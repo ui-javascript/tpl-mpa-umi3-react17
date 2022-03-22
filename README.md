@@ -1,6 +1,8 @@
 # README
 
-暂时是多路由页面 @todo
+- @demo
+    - https://ui-javascript.github.io/tpl-mpa-umi3-react17
+    - https://ui-javascript.github.io/tpl-mpa-umi3-react17/page2.html
 
 # 常见问题 @bug
 
@@ -8,6 +10,7 @@
 
 ```
 @ps 但感觉不好搞
+暂时还是多路由页面, 但启用MPA, 打包出来是多页面
 
 ===
 chain-webpack

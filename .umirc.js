@@ -5,15 +5,15 @@ const { CONFIG } = require('./mpa.config');
 
 const mpaEntries = getEntry(CONFIG.entry);
 
-const routes = getEntry.hasIndex
-  ? mpaEntries.entry
-  : [
-      {
-        path: '/',
-        component: mpaEntries.entry[0].component,
-      },
-      ...mpaEntries.entry,
-    ];
+const routes = [
+  {
+    path: '/',
+    component: mpaEntries.indexInfo.hasIndex
+      ? mpaEntries.indexInfo.indexComponent
+      : mpaEntries.entries[0].component,
+  },
+  ...mpaEntries.entries,
+];
 console.log(routes);
 
 export default defineConfig({

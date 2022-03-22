@@ -27,7 +27,10 @@ function shouldReadAsEntry(moduleName) {
 
 exports.getEntry = function getEntry(globPath) {
   const entries = [];
-  let hasIndex = false;
+  let indexInfo = {
+    hasIndex: false,
+    indexComponent: null,
+  };
 
   glob.sync(globPath).forEach((entry) => {
     // 切割路径 --> [ '.', '_project', 'module', 'foo.js' ]
@@ -69,8 +72,11 @@ exports.getEntry = function getEntry(globPath) {
 
     // entries[uuid] = entry;
 
+    // console.log(uuid)
     if (uuid == 'index') {
-      hasIndex = true;
+      console.log('原目录存在首页');
+      indexInfo.hasIndex = true;
+      indexInfo.indexComponent = '../.' + entry;
     }
 
     entries.push({
@@ -83,7 +89,7 @@ exports.getEntry = function getEntry(globPath) {
   // console.log(browserPages);
 
   return {
-    entry: entries,
-    hasIndex,
+    entries,
+    indexInfo,
   };
 };

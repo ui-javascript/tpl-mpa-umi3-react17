@@ -10995,7 +10995,7 @@
             (0, i.jsx)('div', {
               children: (0, i.jsx)('h1', {
                 className: o().title,
-                children: 'Page index111',
+                children: '\u9996\u9875',
               }),
             });
         t['Z'] = a;
