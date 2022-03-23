@@ -20,6 +20,13 @@ chain-webpack
 ReactDOM.render(<App />, document.getElementById('root'))
 ```
 
+- @umijs/runtime“ does not exist in container @fix 
+    - https://blog.csdn.net/qq_40593656/article/details/120083448
+
+```
+删除src 下 .umi 文件
+```
+
 - 打包路径publicPath的问题 @fix
     - https://blog.csdn.net/qq_34273888/article/details/110621995
 
