@@ -62,7 +62,7 @@ export default defineConfig({
 
   // devtool: false,
   dynamicImport: {},
-  // chunks: ['vendors', 'antdesigns', 'umi'],
+  // chunks: ['vendors', 'umi'],
   chainWebpack(config, { env, webpack, createCSSRule }) {
     // 设置 alias
     // config.resolve.alias.set('@', 'src');
@@ -86,17 +86,12 @@ export default defineConfig({
           minChunks: 3,
           automaticNameDelimiter: '.',
           cacheGroups: {
-            vendors: {
+            vendor: {
               name: 'vendors',
-              chunks: 'all',
-              test: /[/]node_modules[/](react|react-dom|react-router|react-router-dom|lodash|lodash-decorators|redux-saga|re-select|dva|moment)[/]/,
-              priority: -10,
-            },
-            antdesigns: {
-              name: 'antdesigns',
-              chunks: 'all',
-              test: /[/]node_modules[/](@ant-design|antd)[/]/,
-              priority: -11,
+              test({ resource }) {
+                return /[\\/]node_modules[\\/]/.test(resource);
+              },
+              priority: 10,
             },
           },
         },
