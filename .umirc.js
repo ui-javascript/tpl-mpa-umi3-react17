@@ -37,15 +37,20 @@ export default defineConfig({
   //     ? 'https://ui-javascript.github.io/tpl-mpa-umi3-react17/'
   //     : '/',
   outputPath: 'docs',
+  hash: true,
+  history: { type: 'hash' },
   // history: { type: 'hash' },
   mfsu: {
     //   // production: { output: '.mfsu-production' }
   },
   // fastRefresh: {},
+  esbuild: {},
 
   // @todo 多页面配置总有问题
-  mpa: {},
-  // exportStatic: {},
+  // mpa: {},
+  // exportStatic: {
+  //   htmlSuffix: true,
+  // },
 
   targets: {
     chrome: 79,
@@ -55,7 +60,7 @@ export default defineConfig({
     ios: false,
   },
 
-  devtool: false,
+  // devtool: false,
   dynamicImport: {},
   // chunks: ['vendors', 'antdesigns', 'umi'],
   chainWebpack(config, { env, webpack, createCSSRule }) {
