@@ -8,17 +8,17 @@
       'use strict';
       s.r(t);
       s(7294);
-      var n = s(7271),
-        c = s.n(n),
-        i = s(5893);
-      const l = () =>
-        (0, i.jsx)('div', {
-          children: (0, i.jsx)('h1', {
-            className: c().title,
-            children: '\u9996\u9875',
-          }),
-        });
-      t['default'] = l;
+      var i = s(7271),
+        l = s.n(i),
+        n = s(5893),
+        c = () =>
+          (0, n.jsx)('div', {
+            children: (0, n.jsx)('h1', {
+              className: l().title,
+              children: '\u9996\u9875',
+            }),
+          });
+      t['default'] = c;
     },
   },
 ]);

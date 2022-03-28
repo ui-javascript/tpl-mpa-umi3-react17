@@ -56,7 +56,7 @@ export default defineConfig({
   // },
 
   // devtool: false,
-  // dynamicImport: {},
+  dynamicImport: {},
   // chunks: ['vendors', 'antdesigns', 'umi'],
   // chainWebpack(config, { env, webpack, createCSSRule }) {
   //   // 设置 alias

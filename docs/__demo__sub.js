@@ -1,14 +1,14 @@
 (self['webpackChunk'] = self['webpackChunk'] || []).push([
   [144],
   {
-    2508: function (e, s, c) {
+    2508: function (e, s, u) {
       'use strict';
-      c.r(s);
-      c(7294);
-      var h = c(5893);
+      u.r(s);
+      u(7294);
+      var c = u(5893);
       s['default'] = () =>
-        (0, h.jsx)('div', {
-          children: (0, h.jsx)('h1', { children: 'Page2' }),
+        (0, c.jsx)('div', {
+          children: (0, c.jsx)('h1', { children: 'Sub Page' }),
         });
     },
   },

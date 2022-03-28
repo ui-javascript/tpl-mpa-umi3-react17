@@ -4,7 +4,7 @@ import React from 'react';
 export default () => {
   return (
     <div>
-      <h1>Page2</h1>
+      <h1>Sub Page</h1>
     </div>
   );
 };
