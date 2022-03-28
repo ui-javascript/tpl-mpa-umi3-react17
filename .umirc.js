@@ -47,16 +47,16 @@ export default defineConfig({
   mpa: {},
   // exportStatic: {},
 
-  targets: {
-    chrome: 79,
-    firefox: false,
-    safari: false,
-    edge: false,
-    ios: false,
-  },
+  // targets: {
+  //   chrome: 79,
+  //   firefox: false,
+  //   safari: false,
+  //   edge: false,
+  //   ios: false,
+  // },
 
   // devtool: false,
-  dynamicImport: {},
+  // dynamicImport: {},
   // chunks: ['vendors', 'antdesigns', 'umi'],
   // chainWebpack(config, { env, webpack, createCSSRule }) {
   //   // 设置 alias
