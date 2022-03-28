@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM  from 'react-dom';
+// import ReactDOM from 'react-dom';
 
 export default () => {
   return (
@@ -7,6 +7,6 @@ export default () => {
       <h1>Page2</h1>
     </div>
   );
-}
+};
 
 // ReactDOM.render(<App />, document.getElementById('root'));
