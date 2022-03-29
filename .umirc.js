@@ -49,7 +49,7 @@ export default defineConfig({
   mpa: {},
   // exportStatic: {},
 
-  // dynamicImport: {},
+  dynamicImport: {},
   // chainWebpack(config, { env, webpack, createCSSRule }) {
   //   // 设置 alias
   //   // config.resolve.alias.set('@', 'src');
