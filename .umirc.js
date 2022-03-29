@@ -37,7 +37,7 @@ export default defineConfig({
   //     ? 'https://ui-javascript.github.io/tpl-mpa-umi3-react17/'
   //     : '/',
   outputPath: 'docs',
-  esbuild: {},
+  // esbuild: {},
   hash: true,
   // history: { type: 'hash' },
   mfsu: {
