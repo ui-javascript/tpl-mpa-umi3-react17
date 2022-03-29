@@ -31,11 +31,9 @@ export default defineConfig({
   //   },
   // ],
   routes,
-  publicPath: './',
-  // publicPath:
-  //   process.env.NODE_ENV === 'production'
-  //     ? 'https://ui-javascript.github.io/tpl-mpa-umi3-react17/'
-  //     : '/',
+  // publicPath: './',
+  publicPath:
+    process.env.NODE_ENV === 'production' ? '/tpl-mpa-umi3-react17/' : '/',
   outputPath: 'docs',
   hash: true,
   history: { type: 'hash' },
