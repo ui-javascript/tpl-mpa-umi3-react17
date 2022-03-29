@@ -37,6 +37,8 @@ export default defineConfig({
   //     ? 'https://ui-javascript.github.io/tpl-mpa-umi3-react17/'
   //     : '/',
   outputPath: 'docs',
+  esbuild: {},
+  hash: true,
   // history: { type: 'hash' },
   mfsu: {
     //   // production: { output: '.mfsu-production' }
@@ -47,6 +49,7 @@ export default defineConfig({
   mpa: {},
   // exportStatic: {},
 
+  dynamicImport: {},
   // chainWebpack(config, { env, webpack, createCSSRule }) {
   //   // 设置 alias
   //   // config.resolve.alias.set('@', 'src');
