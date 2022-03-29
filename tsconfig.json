@@ -23,7 +23,6 @@
     ".umirc.js",
     "typings.d.ts",
     "src/pages/index/index.tsx",
-    "__demo/page2",
     "__demo/sub.jsx"
   ],
   "exclude": [

@@ -31,9 +31,9 @@ export default defineConfig({
   //   },
   // ],
   routes,
-  // publicPath: './',
-  publicPath:
-    process.env.NODE_ENV === 'production' ? '/tpl-mpa-umi3-react17/' : '/',
+  publicPath: './',
+  // publicPath:
+  //   process.env.NODE_ENV === 'production' ? '/tpl-mpa-umi3-react17/' : '/',
   outputPath: 'docs',
   hash: true,
   history: { type: 'hash' },
@@ -50,50 +50,50 @@ export default defineConfig({
   //   htmlSuffix: true,
   // },
 
-  targets: {
-    chrome: 79,
-    firefox: false,
-    safari: false,
-    edge: false,
-    ios: false,
-  },
+  // targets: {
+  //   chrome: 79,
+  //   firefox: false,
+  //   safari: false,
+  //   edge: false,
+  //   ios: false,
+  // },
 
   // devtool: false,
-  dynamicImport: {},
+  // dynamicImport: {},
   // chunks: ['vendors', 'umi'],
-  chainWebpack(config, { env, webpack, createCSSRule }) {
-    // 设置 alias
-    // config.resolve.alias.set('@', 'src');
-    // 入口配置 @todo
-    // config
-    // .entry('index')
-    //   .add('./__demo/page1');
-    // config.entry('page2')
-    //     .add('./__demo/page2.jsx')
-    //     .end();
-    // 删除 umi 内置插件
-    // config.plugins.delete('progress');
-    // config.plugins.delete('friendly-error');
-    // config.plugins.delete('copy');
+  // chainWebpack(config, { env, webpack, createCSSRule }) {
+  //   // 设置 alias
+  //   // config.resolve.alias.set('@', 'src');
+  //   // 入口配置 @todo
+  //   // config
+  //   // .entry('index')
+  //   //   .add('./__demo/page1');
+  //   // config.entry('page2')
+  //   //     .add('./__demo/page2.jsx')
+  //   //     .end();
+  //   // 删除 umi 内置插件
+  //   // config.plugins.delete('progress');
+  //   // config.plugins.delete('friendly-error');
+  //   // config.plugins.delete('copy');
 
-    config.merge({
-      optimization: {
-        splitChunks: {
-          chunks: 'all',
-          minSize: 30000,
-          minChunks: 3,
-          automaticNameDelimiter: '.',
-          cacheGroups: {
-            vendor: {
-              name: 'vendors',
-              test({ resource }) {
-                return /[\\/]node_modules[\\/]/.test(resource);
-              },
-              priority: 10,
-            },
-          },
-        },
-      },
-    });
-  },
+  //   config.merge({
+  //     optimization: {
+  //       splitChunks: {
+  //         chunks: 'all',
+  //         minSize: 30000,
+  //         minChunks: 3,
+  //         automaticNameDelimiter: '.',
+  //         cacheGroups: {
+  //           vendor: {
+  //             name: 'vendors',
+  //             test({ resource }) {
+  //               return /[\\/]node_modules[\\/]/.test(resource);
+  //             },
+  //             priority: 10,
+  //           },
+  //         },
+  //       },
+  //     },
+  //   });
+  // },
 });
