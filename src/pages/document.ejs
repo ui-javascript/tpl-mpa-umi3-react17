@@ -5,44 +5,34 @@
     <meta name="theme-color" content="#1890ff" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>React 多页面</title>
-    <link rel="stylesheet" href="./umi.09fd55b2.css" />
-    <script>
-      window.routerBase = "/";
-    </script>
-    <script>
-      //! umi version: 3.5.21
-    </script>
-    <script>
-      window.g_path = "/index.html";
-    </script>
   </head>
   <body>
     <noscript>
       <div class="noscript-container">
         Hi there! Please
         <div class="noscript-enableJS">
-          <a
-            href="https://www.enablejavascript.io/en"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://www.enablejavascript.io/en" target="_blank" rel="noopener noreferrer">
             <b>enable Javascript</b>
           </a>
         </div>
       </div>
     </noscript>
 
-    <ul>
-      <li>
-        <a href="./index.html"> ./index.html </a>
-      </li>
+    <% if (context.config.routes && context.config.routes.length > 0) { %>
+      <ul>
+      <% for(var i=0; i< context.config.routes.length; i++) {%>
+        <% if (context.config.routes[i].path == '/') {continue;} %>
 
-      <li>
-        <a href="./sub.html"> ./sub.html </a>
-      </li>
-    </ul>
-
-    <hr />
+        <li>
+          <a href='.<%= context.config.routes[i].path %>.html'>
+            .<%= context.config.routes[i].path %>.html
+          </a>
+        </li>
+        <% } %>
+      </ul>
+    
+      <hr />
+    <% } %>
 
     <div id="root">
       <style>
@@ -63,8 +53,8 @@
           justify-content: center;
           margin-top: 90px;
           font-size: 20px;
-          font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-            "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',
+            Geneva, Verdana, sans-serif;
         }
         .noscript-enableJS {
           padding-right: 3px;
@@ -91,15 +81,13 @@
           text-align: center;
           list-style: none;
           opacity: 0;
-          -webkit-transition: -webkit-transform 0.3s
-            cubic-bezier(0.78, 0.14, 0.15, 0.86);
-          transition: -webkit-transform 0.3s
-            cubic-bezier(0.78, 0.14, 0.15, 0.86);
+          -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+          transition: -webkit-transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
           transition: transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
           transition: transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86),
             -webkit-transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
-          -webkit-font-feature-settings: "tnum";
-          font-feature-settings: "tnum";
+          -webkit-font-feature-settings: 'tnum';
+          font-feature-settings: 'tnum';
         }
         .ant-spin-spinning {
           position: static;
@@ -207,6 +195,7 @@
           min-height: 420px;
         "
       >
+
         <div class="page-loading-warp">
           <div class="ant-spin ant-spin-lg ant-spin-spinning">
             <span class="ant-spin-dot ant-spin-dot-spin"
@@ -215,9 +204,8 @@
             ></span>
           </div>
         </div>
+
       </div>
     </div>
-
-    <script src="./umi.7be8c2f7.js"></script>
   </body>
 </html>
