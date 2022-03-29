@@ -19,17 +19,14 @@
     </noscript>
 
     <% if (context.config.routes && context.config.routes.length > 0) { %>
-      <ul>
       <% for(var i=0; i< context.config.routes.length; i++) {%>
         <% if (context.config.routes[i].path == '/') {continue;} %>
 
-        <li>
-          <a href='.<%= context.config.routes[i].path %>.html'>
+          <a style="display: inline-block;" href='.<%= context.config.routes[i].path %>.html'>
             .<%= context.config.routes[i].path %>.html
           </a>
-        </li>
+       
         <% } %>
-      </ul>
     
       <hr />
     <% } %>
