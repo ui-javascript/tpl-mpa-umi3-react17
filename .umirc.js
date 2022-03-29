@@ -33,34 +33,20 @@ export default defineConfig({
   routes,
   publicPath: './',
   // publicPath:
-  //   process.env.NODE_ENV === 'production' ? '/tpl-mpa-umi3-react17/' : '/',
+  //   process.env.NODE_ENV === 'production'
+  //     ? 'https://ui-javascript.github.io/tpl-mpa-umi3-react17/'
+  //     : '/',
   outputPath: 'docs',
-  hash: true,
-  history: { type: 'hash' },
   // history: { type: 'hash' },
   mfsu: {
     //   // production: { output: '.mfsu-production' }
   },
   // fastRefresh: {},
-  esbuild: {},
 
   // @todo 多页面配置总有问题
-  // mpa: {},
-  // exportStatic: {
-  //   htmlSuffix: true,
-  // },
+  mpa: {},
+  // exportStatic: {},
 
-  // targets: {
-  //   chrome: 79,
-  //   firefox: false,
-  //   safari: false,
-  //   edge: false,
-  //   ios: false,
-  // },
-
-  // devtool: false,
-  // dynamicImport: {},
-  // chunks: ['vendors', 'umi'],
   // chainWebpack(config, { env, webpack, createCSSRule }) {
   //   // 设置 alias
   //   // config.resolve.alias.set('@', 'src');
@@ -75,25 +61,5 @@ export default defineConfig({
   //   // config.plugins.delete('progress');
   //   // config.plugins.delete('friendly-error');
   //   // config.plugins.delete('copy');
-
-  //   config.merge({
-  //     optimization: {
-  //       splitChunks: {
-  //         chunks: 'all',
-  //         minSize: 30000,
-  //         minChunks: 3,
-  //         automaticNameDelimiter: '.',
-  //         cacheGroups: {
-  //           vendor: {
-  //             name: 'vendors',
-  //             test({ resource }) {
-  //               return /[\\/]node_modules[\\/]/.test(resource);
-  //             },
-  //             priority: 10,
-  //           },
-  //         },
-  //       },
-  //     },
-  //   });
   // },
 });
